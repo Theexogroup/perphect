@@ -70,7 +70,7 @@ export async function onRequestPost({ request, env }) {
 
   // Fallar de forma segura: no aceptar envíos sin las credenciales configuradas.
   if (!env?.RESEND_API_KEY || !env?.TURNSTILE_SECRET_KEY) {
-    return reply(503, { ok: false, error: 'El formulario está en preparación. Escríbenos por WhatsApp o por correo.' });
+    return reply(503, { ok: false, error: 'El formulario está en preparación. Escríbenos por WhatsApp al +52 55 8867 3288.' });
   }
   const token = text(body.turnstileToken, 2048);
   if (!token || token.length > 2048) {

@@ -1,13 +1,20 @@
 /* PerPHect · Redefining Business Strategy
-   Tokens del Manual de identidad (p. 09). Luiss Serif / Luiss Sans se sustituyen
-   temporalmente por Playfair Display y Fira Sans, como indica el manual. */
+   Tokens del Manual de identidad (p. 09). Tipografías oficiales Luiss Serif y Luiss Sans. */
+@font-face{font-family:"Luiss Sans";src:url(../fonts/luiss-sans-thin.woff2) format("woff2");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"Luiss Sans";src:url(../fonts/luiss-sans-regular.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Luiss Sans";src:url(../fonts/luiss-sans-italic.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Luiss Sans";src:url(../fonts/luiss-sans-bold.woff2) format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Luiss Serif";src:url(../fonts/luiss-serif-regular.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Luiss Serif";src:url(../fonts/luiss-serif-italic.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Luiss Serif";src:url(../fonts/luiss-serif-bold.woff2) format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Luiss Serif";src:url(../fonts/luiss-serif-bold-italic.woff2) format("woff2");font-weight:700;font-style:italic;font-display:swap}
 :root{
   --oro:#b08c52; --oro-claro:#c9a56b; --oro-profundo:#86662f;
   --carbon:#1c1d1f; --grafito:#3a3a3c; --topo:#9e8c80;
   --marmol:#f6f6f6; --blanco:#ffffff;
   --texto:#1c1d1f; --suave:#4a4a4d; --tenue:#77777a; --linea:#e2e0dc;
-  --font-serif:"Luiss Serif","Playfair Display",Georgia,serif;
-  --font-sans:"Luiss Sans","Fira Sans","Segoe UI",sans-serif;
+  --font-serif:"Luiss Serif",Georgia,serif;
+  --font-sans:"Luiss Sans","Segoe UI",sans-serif;
   --ancho-contenido:1120px; --ancho-lectura:720px; --radius-caja:12px;
   --sec:96px;
 }
@@ -371,7 +378,7 @@ body.ck-open{overflow:hidden}
   header.open .menu{transform:none}
   .menu a{padding:20px 0;border-bottom:1px solid var(--linea);font-size:14px}
   .menu a:not(.btn)::after{display:none}
-  .menu .btn{margin-top:28px;padding:18px;border-bottom:0}
+  .menu .btn{margin-top:28px;padding:18px;border:1px solid var(--oro)}
   body.home header:not(.solid):not(.open) .menu a{color:var(--carbon)}
   .split,.split.wide,.pyramid{grid-template-columns:1fr;gap:40px}
   .pillars{grid-template-columns:1fr}
@@ -420,3 +427,7 @@ body.ck-open{overflow:hidden}
 }
 @media (max-width:900px){.split>[style*="padding-top"]{padding-top:0!important}.seal{justify-content:flex-start}}
 .page-head.plain{background:var(--marmol)}
+
+section[id]{scroll-margin-top:84px}
+@media (max-width:900px){section[id]{scroll-margin-top:72px}}
+.contact-sec{background:var(--marmol)}

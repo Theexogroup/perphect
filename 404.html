@@ -21,15 +21,15 @@
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="apple-touch-icon" href="/assets/icono.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap">
-<link rel="stylesheet" href="/assets/css/styles.css?v=7f3fb36c">
+<link rel="preload" href="/assets/fonts/luiss-sans-regular.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/fonts/luiss-serif-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/styles.css?v=d128c79e">
 </head>
 <body class="home">
 <header>
   <div class="wrap nav">
     <a class="brand" href="/" aria-label="PerPHect, inicio"><img class="dark" src="/assets/logos/perphect-color-sin-lema.svg" alt="PerPHect" width="170" height="47"><img class="light" src="/assets/logos/perphect-blanco-sin-lema.svg" alt="PerPHect" width="170" height="47"></a>
     <button class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span></button>
-    <nav class="menu" id="menu" aria-label="Principal"><a href="index.html">Inicio</a><a href="servicios.html">Servicios</a><a href="consejero.html">El Consejero</a><a href="metodologia.html">Metodología</a><a href="contacto.html" class="btn btn-line">Contacto</a></nav>
+    <nav class="menu" id="menu" aria-label="Principal"><a href="/#inicio">Inicio</a><a href="/#propuesta">Propuesta</a><a href="/#consejero">El Consejero</a><a href="/#metodologia">Metodología</a><a href="/#contacto" class="btn btn-line">Contacto</a></nav>
   </div>
 </header>
 <main>
@@ -40,7 +40,7 @@
     <span class="label">Error 404</span>
     <h1>Esta página no existe</h1>
     <p class="intro">La página que buscas cambió de lugar o ya no está disponible. Vuelve al inicio o agenda una conversación con nosotros.</p>
-    <div class="ctas"><a href="/" class="btn btn-gold">Volver al inicio</a><a href="/contacto" class="btn btn-line">Contacto</a></div>
+    <div class="ctas"><a href="/" class="btn btn-gold">Volver al inicio</a><a href="/#contacto" class="btn btn-line">Contacto</a></div>
   </div>
 </section>
 </main>
@@ -48,15 +48,15 @@
   <div class="wrap">
     <div class="fgrid">
       <div class="fl"><img class="flogo" src="/assets/logos/perphect-blanco.svg" alt="PerPHect · Redefining Business Strategy" width="220" height="75" loading="lazy"><p>Firma de consejería empresarial. Gobierno corporativo, empresas familiares e institucionalización: empresarios consultando a empresarios.</p></div>
-      <div><h5>Sitio</h5><ul><li><a href="servicios.html">Servicios</a></li><li><a href="consejero.html">El Consejero</a></li><li><a href="metodologia.html">Metodología</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+      <div><h5>Sitio</h5><ul><li><a href="/#propuesta">Propuesta</a></li><li><a href="/#consejero">El Consejero</a></li><li><a href="/#metodologia">Metodología</a></li><li><a href="/#contacto">Contacto</a></li><li><a href="https://wa.me/525588673288?text=Hola%20PerPHect%2C%20me%20gustar%C3%ADa%20agendar%20una%20conversaci%C3%B3n." target="_blank" rel="noopener">WhatsApp +52 55 8867 3288</a></li></ul></div>
       <div><h5>Oficinas</h5><div class="addr"><div><b>México, CDMX</b><p>Juan de Acuña 318, Lomas - Virreyes,<br>Lomas de Chapultepec IV Secc,<br>Miguel Hidalgo, 11000, Ciudad de México</p></div><div><b>Dallas, TX</b><p>3441 Halifax St, Dallas,<br>Texas 75247, EE. UU.</p></div></div></div>
     </div>
     <div class="seal"><img src="/assets/img/sello-mx-us.png" alt="Sello binacional México y Estados Unidos" width="150" height="48" loading="lazy"><span>México · Estados Unidos</span></div>
     <div class="fbottom"><p class="legal">La información de este sitio es de carácter general e informativo. Los alcances, entregables y honorarios de cada servicio se definen en la propuesta económica entregada a cada cliente.</p><div><p>© <span id="yr">2026</span> PerPHect®. Todos los derechos reservados.</p><div class="fbottom-links" style="margin-top:10px"><a href="aviso-privacidad.html">Aviso de privacidad</a><button type="button" data-cookie-settings>Configurar cookies</button></div></div></div>
   </div>
 </footer>
-
-<script src="/assets/js/main.js?v=b0f25188"></script>
+<a class="wa" href="https://wa.me/525588673288?text=Hola%20PerPHect%2C%20me%20gustar%C3%ADa%20agendar%20una%20conversaci%C3%B3n." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.34-.5.05-.97.23-3.27-.68-2.77-1.09-4.51-3.92-4.65-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.55.79 1.9.86 2.04.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.11.07.66-.17 1.33z"/></svg><span>WhatsApp</span></a>
+<script src="/assets/js/main.js?v=415e95d1"></script>
 <script src="/assets/js/cookies.js?v=6791dda6" defer></script>
 </body>
 </html>

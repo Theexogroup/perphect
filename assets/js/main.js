@@ -20,6 +20,26 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = o ? 'hidden' : '';
   });
 
+  // Menú de una sola página: cerrar al elegir sección y marcar la sección visible
+  const links = [...document.querySelectorAll('.menu a')];
+  links.forEach(a => a.addEventListener('click', () => {
+    if (!header.classList.contains('open')) return;
+    header.classList.remove('open'); burger.setAttribute('aria-expanded', false);
+    burger.setAttribute('aria-label', 'Abrir menú'); document.body.style.overflow = '';
+  }));
+  const secs = links.map(a => document.getElementById((a.getAttribute('href').split('#')[1]) || '')).filter(Boolean);
+  if (secs.length && 'IntersectionObserver' in window) {
+    const spy = new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return;
+      links.forEach(a => {
+        const on = a.getAttribute('href').endsWith('#' + e.target.id);
+        a.classList.toggle('active', on);
+        if (on) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current');
+      });
+    }), { rootMargin: '-45% 0px -50% 0px' });
+    secs.forEach(s => spy.observe(s));
+  }
+
   const els = document.querySelectorAll('.rv');
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver(es => es.forEach(e => {
@@ -109,7 +129,7 @@ function initForm() {
     } catch (err) {
       resetWidget();
       btn.disabled = false; btn.textContent = btnText;
-      say((err && err.message ? err.message : 'No se pudo enviar tu solicitud.') + ' También puedes escribirnos por WhatsApp.', true);
+      say((err && err.message ? err.message : 'No se pudo enviar tu solicitud.') + ' También puedes escribirnos por WhatsApp al +52 55 8867 3288.', true);
     }
   });
 }
