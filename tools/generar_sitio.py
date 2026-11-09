@@ -25,7 +25,7 @@ IG_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-widt
 LI_SVG = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.83v1.54h.05c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.13V21h-4v-4.98c0-1.19-.02-2.72-1.66-2.72-1.66 0-1.91 1.3-1.91 2.63V21h-4z"/></svg>'
 SOCIAL = f'<div class="social"><a href="{IG}" target="_blank" rel="noopener" aria-label="Instagram de PerPHect">{IG_SVG}</a><a href="{LI}" target="_blank" rel="noopener" aria-label="LinkedIn de PerPHect">{LI_SVG}</a><a href="{FB}" target="_blank" rel="noopener" aria-label="Facebook de PerPHect">{FB_SVG}</a></div>'
 
-NAV = [('/#inicio', 'Inicio'), ('/#propuesta', 'Propuesta'), ('/#consejero', 'El Consejero'), ('/#metodologia', 'Metodología')]
+NAV = [('/#inicio', 'Inicio'), ('/#consejero', 'El Consejero'), ('/#estructura', 'Estructura'), ('/#innovacion', 'Innovación')]
 FONTS = '<link rel="preload" href="/assets/fonts/luiss-sans-regular.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/fonts/luiss-serif-regular.woff2" as="font" type="font/woff2" crossorigin>'
 
 
@@ -169,49 +169,37 @@ page('index.html', 'PerPHect | Gobierno corporativo y empresas familiares',
     <p class="tag">Gobierno corporativo · Empresas familiares · Institucionalización</p>
     <h1>Empresarios consultando a empresarios</h1>
     <p class="intro">Acompañamos a dueños y familias empresarias en la transición de <b>Dueño-CEO a Dueño-Presidente</b>: transformamos la intención en estructura y la estructura en resultados.</p>
-    <div class="ctas"><a href="#contacto" class="btn btn-gold">Agenda una conversación</a><a href="#metodologia" class="btn btn-line">Conoce la metodología</a></div>
+    <div class="ctas"><a href="#contacto" class="btn btn-gold">Agenda una conversación</a><a href="#consejero" class="btn btn-line">Conoce al Consejero PerPHect</a></div>
   </div>
   <div class="cities" aria-hidden="true">Ciudad de México <i></i> Dallas</div>
-</section>
-
-<section id="propuesta">
-  <div class="wrap">
-    {band('Propuesta de', 'valor')}
-    <div class="split wide">
-      <div><span class="label rv">Por qué PerPHect</span><h2 class="rv">No todas las figuras de acompañamiento generan el mismo impacto.</h2></div>
-      <div class="reading rv" style="padding-top:38px"><p>Pasar de dueño a estratega y de estratega a institucionalizador es una de las transiciones más complejas de una empresa. En PerPHect la resolvemos desde la práctica, no desde la teoría: <b>somos empresarios consultando a empresarios</b>.</p></div>
-    </div>
-    <div class="compare rv">
-      <div><small>Consultor</small><h3>Recetas predefinidas</h3><p>Llega con manuales prefabricados que no siempre responden a tu realidad.</p></div>
-      <div><small>Coach</small><h3>Enfoque en la persona</h3><p>Trabaja lo personal, pero no construye la estructura de la organización.</p></div>
-      <div><small>Consejero tradicional</small><h3>Un rol formal</h3><p>Cumple una función más formal que real dentro del consejo.</p></div>
-      <div><small>Consejero PerPHect</small><h3>Estructura y resultados</h3><p>Convierte cada decisión en permanencia, institucionalización y valor sostenible.</p></div>
-    </div>
-  </div>
 </section>
 
 {portadilla('El Consejero<br>PerPHect', ['estrategia', 'consejero'], 'consejero')}
 
 <section>
-  <div class="wrap split wide">
-    <div><span class="label rv">Un consejero distinto</span><h2 class="rv">Transforma la intención en estructura y la estructura en resultados.</h2></div>
-    <div class="reading rv" style="padding-top:38px">
-      <p>El <b>Consejero PerPHect</b> es distinto. Su valor radica en ser, ante todo, un <b>empresario consultando a empresarios</b>. La legitimidad de su acompañamiento proviene de haber enfrentado la toma de decisiones bajo presión, de haber asumido riesgos reales y de sostener el crecimiento en contextos cambiantes.</p>
-      <p>Esa experiencia le permite hablar <b>desde la práctica</b> y no desde la teoría, aportando claridad y empatía en cada etapa del proceso.</p>
-      <p>Su función no es pasiva ni decorativa: es la de un agente que asegura que cada decisión se traduzca en <b>permanencia, institucionalización y creación de valor sostenible</b>.</p>
+  <div class="wrap">
+    {band('El Consejero', 'PerPHect')}
+    <div class="reading rv" style="max-width:860px">
+      <p>En PerPHect entendemos que no todas las figuras de acompañamiento empresarial generan el mismo impacto. Existen <b>consultores</b> que llegan con recetas predefinidas, <b>coaches</b> que se enfocan en la persona y <b>consejeros tradicionales</b> que cumplen un rol más formal que real. Sin embargo, ninguno de ellos logra <b>resolver a fondo la compleja transición</b> de pasar de dueño a estratega y de estratega a institucionalizador.</p>
+      <p>El <b>Consejero PerPHect</b> es distinto. Su valor radica en ser, ante todo, un <b>empresario consultando a empresarios</b>. La legitimidad de su acompañamiento proviene de haber enfrentado la toma de decisiones bajo presión, de haber asumido riesgos reales y de sostener el crecimiento en contextos cambiantes. Esa experiencia le permite hablar <b>desde la práctica</b> y no <b>desde la teoría</b>, aportando claridad y empatía en cada etapa del proceso.</p>
+      <p>A diferencia del consultor que entrega manuales prefabricados o del coach que trabaja únicamente lo personal, el Consejero PerPHect <b>transforma la intención en estructura y la estructura en resultados.</b> Su función no es pasiva ni decorativa, sino la de un agente que asegura que cada decisión se traduzca en permanencia, institucionalización y creación de valor sostenible.</p>
+    </div>
+    <div class="compare rv">
+      <div><small>Consultor</small><h3>Recetas predefinidas</h3><p>Entrega manuales prefabricados.</p></div>
+      <div><small>Coach</small><h3>Se enfoca en la persona</h3><p>Trabaja únicamente lo personal.</p></div>
+      <div><small>Consejero tradicional</small><h3>Rol formal</h3><p>Cumple un rol más formal que real.</p></div>
+      <div><small>Consejero PerPHect</small><h3>Empresario consultando a empresarios</h3><p>Transforma la intención en estructura y la estructura en resultados.</p></div>
     </div>
   </div>
-  <div class="wrap"><div class="box quote-box rv" style="margin-top:72px"><p class="quote">“El consejero se mide por el valor creado, no por el tiempo invertido.”</p></div></div>
 </section>
 
 <section class="on-dark">
   <div class="wrap">
-    <span class="label rv">Los pilares del Consejero PerPHect</span>
-    <h2 class="rv">Cuatro principios en cada decisión.</h2>
+    <h2 class="rv">Los pilares del Consejero PerPHect</h2>
     <div class="pillars">
-      <div class="pillar rv"><h3><span class="dot"></span>Disciplina en la gobernanza</h3><p>Toda decisión se conduce bajo protocolos claros de Presentación, Discusión y Aprobación (PDA). Así se evita que las decisiones sean aisladas o impulsivas, y se garantiza la continuidad.</p></div>
+      <div class="pillar rv"><h3><span class="dot"></span>Disciplina en la gobernanza</h3><p>Toda decisión se conduce bajo protocolos claros de presentación, discusión y aprobación (PDA). Con ello se evita que las decisiones sean aisladas o impulsivas, y se garantiza la continuidad.</p></div>
       <div class="pillar rv"><h3><span class="dot"></span>Estructura con propósito</h3><p>Convierte la intuición del dueño en procesos estratégicos, de forma que la organización trascienda a las personas y se proyecte hacia el futuro.</p></div>
-      <div class="pillar rv"><h3><span class="dot"></span>Independencia y visión integral</h3><p>Actúa con autonomía, sin complacencias ni conflictos de interés, con una visión que conecta estrategia, sostenibilidad y permanencia.</p></div>
+      <div class="pillar rv"><h3><span class="dot"></span>Independencia y visión integral</h3><p>El consejero actúa con autonomía, sin complacencias ni conflictos de interés, aportando una visión que conecta estrategia, sostenibilidad y permanencia.</p></div>
       <div class="pillar rv"><h3><span class="dot"></span>Impacto medible</h3><p>Cada decisión debe generar avances concretos, con indicadores claros. <b style="color:#fff">El consejero se mide por el valor creado, no por el tiempo invertido.</b></p></div>
     </div>
   </div>
@@ -219,12 +207,11 @@ page('index.html', 'PerPHect | Gobierno corporativo y empresas familiares',
 
 <section>
   <div class="wrap">
-    {band('El consejero y la', 'vanguardia')}
+    {band('El Consejero PerPHect y la', 'vanguardia')}
     <div class="split wide">
       <div class="rv" style="display:flex;justify-content:center"><img src="/assets/img/icon-vanguardia.png" alt="" width="200" height="200" style="width:170px;filter:brightness(.72)" loading="lazy"></div>
       <div class="reading rv">
-        <p>El <b>Consejero PerPHect</b> vive en la vanguardia porque entiende que los retos actuales necesitan <b>velocidad y precisión</b>. No basta con estructuras sólidas: hoy la diferencia está en responder con agilidad sin perder profundidad en las decisiones.</p>
-        <p>Su rol es asegurar que la empresa avance con paso firme, pero también con rapidez, adaptándose a entornos cambiantes y tomando decisiones oportunas que no dejen escapar oportunidades. Esta combinación de <b>disciplina y velocidad</b> lo convierte en un aliado estratégico distinto a cualquier otro.</p>
+        <p>El <b>Consejero PerPHect</b> vive en la vanguardia, porque entiende que los retos actuales necesitan <b>velocidad y precisión.</b> No basta con estructuras sólidas; hoy la diferencia está en la capacidad de responder con agilidad, sin perder profundidad en las decisiones. Su rol es asegurar que la empresa avance con paso firme, pero también con rapidez, adaptándose a entornos cambiantes y tomando decisiones oportunas que no dejen escapar oportunidades. Esta combinación de <b>disciplina y velocidad</b> es lo que convierte al Consejero PerPHect en un aliado estratégico distinto a cualquier otro.</p>
       </div>
     </div>
   </div>
@@ -236,42 +223,43 @@ page('index.html', 'PerPHect | Gobierno corporativo y empresas familiares',
     <div>
       <h2 class="rv">La filosofía que lo sustenta</h2>
       <p class="motto rv">Desarrollo empresarial<br>para el desarrollo económico,<br><b>para el desarrollo social.</b></p>
-      <div class="reading rv" style="margin-top:34px"><p>Un desarrollo empresarial sólido, construido sobre gobernanza y disciplina, se convierte en motor de desarrollo económico sostenible. Y ese crecimiento, proyectado más allá de la empresa, se traduce en desarrollo social que beneficia a colaboradores, familias y comunidades.</p></div>
+      <div class="reading rv" style="margin-top:34px"><p>El Consejero PerPHect encarna esta filosofía porque entiende que un desarrollo empresarial sólido, construido sobre gobernanza y disciplina, se convierte en motor de desarrollo económico sostenible. Y este crecimiento, proyectado más allá de la empresa, se traduce en desarrollo social que beneficia a colaboradores, familias y comunidades.</p></div>
     </div>
   </div>
   <div class="wrap"><div class="box rv"><p style="font-size:19px;color:var(--suave)">Así, el Consejero PerPHect resuelve el <b style="color:var(--carbon)">dilema de la dueñitud</b>: acompaña al dueño en su transición hacia un modelo institucional que combina experiencia práctica, estructura clara y una visión de trascendencia que impacta a la empresa, a la economía y a la sociedad.</p></div></div>
 </section>
 
-<section id="metodologia">
+{portadilla('Estructura de<br>acompañamiento', ['piramide'], 'estructura')}
+
+<section>
   <div class="wrap">
-    {band('Estructura de', 'acompañamiento')}
-    <div class="reading rv"><p>En PerPHect hemos diseñado una estructura clara y funcional que <b>evita la dependencia de una sola persona y asegura resultados consistentes</b>. Nuestro modelo combina simplicidad organizacional con una métrica propia de desempeño: el <b>PerPHect Impact</b>.</p></div>
-    <div class="impact rv"><b>PerPHect Impact</b> <span class="op">=</span> Casos de éxito <span class="op">×</span> Tamaño de la empresa <span class="op">÷</span> Impacto generado en el cliente</div>
+    <div class="reading rv"><p>En PerPHect hemos diseñado una estructura clara y funcional que <b>evita la dependencia de una sola persona y asegura resultados consistentes.</b> Nuestro modelo combina simplicidad organizacional con una métrica propia de desempeño: el <b>PerPHect Impact.</b></p></div>
+    <div class="impact rv"><b>PerPHect Impact</b> <span class="op">=</span> Casos de éxito <span class="op">×</span> Tamaño de la empresa <span class="op">÷</span> Impacto generado en el cliente.</div>
     <p class="muted rv" style="margin-top:22px;max-width:var(--ancho-lectura)">Este indicador refleja cómo cada integrante del equipo contribuye a los logros de nuestros clientes, destacando no solo la magnitud de los proyectos, sino la relevancia y sostenibilidad de los resultados.</p>
     <div class="pyramid">
       <div class="rv">{PYRAMID}</div>
       <div class="levels">
-        <div class="level l1 rv"><span class="tagl"><i>1.</i> Consejero Senior</span><p>Máxima figura de la firma. Su PerPHect Impact se mide en los casos de éxito emblemáticos y en su capacidad para consolidar una <b>visión estratégica global</b>.</p></div>
-        <div class="level l2 rv"><span class="tagl"><i>2.</i> Consejero Junior</span><p>Empresarios con experiencia comprobada que acompañan al cliente en decisiones críticas y <b>lideran proyectos clave</b>. Su PerPHect Impact se vincula al tamaño de las empresas que asesoran y al número de transformaciones exitosas que impulsan.</p></div>
-        <div class="level l3 rv"><span class="tagl"><i>3.</i> Consultores y Analistas</span><p>Base técnica y operativa. Aportan análisis, reportes e investigación que <b>fortalecen la labor de los consejeros</b>. Su PerPHect Impact refleja la calidad del soporte brindado.</p></div>
+        <p class="muted rv">La estructura operativa de la firma se organiza en tres niveles:</p>
+        <div class="level l1 rv"><span class="tagl"><i>1.</i> Consejero Senior</span><p>Máxima figura de la firma. Su PerPHect Impact se mide en los casos de éxito emblemáticos y en su capacidad para consolidar una <b>visión estratégica global.</b></p></div>
+        <div class="level l2 rv"><span class="tagl"><i>2.</i> Consejero Junior</span><p>Empresarios con experiencia comprobada que acompañan al cliente en decisiones críticas y <b>lideran proyectos clave.</b> Su PerPHect Impact se vincula al tamaño de las empresas que asesoran y al número de transformaciones exitosas que impulsan.</p></div>
+        <div class="level l3 rv"><span class="tagl"><i>3.</i> Consultores y Analistas</span><p>Base técnica y operativa. Aportan análisis, reportes e investigación que <b>fortalecen la labor de los consejeros.</b> Su PerPHect Impact refleja la calidad del soporte brindado, multiplicando la capacidad de convertir estrategias en resultados concretos.</p></div>
       </div>
     </div>
+    <div class="box rv" style="margin-top:64px"><p style="font-size:19px;color:var(--suave)">Con este modelo, PerPHect une lo mejor de dos mundos: una estructura sencilla y ágil con una métrica única que garantiza que cada esfuerzo se traduzca en transformaciones reales y duraderas.</p></div>
   </div>
 </section>
 
 {portadilla('Innovación<br>PerPHect', ['cerebro', 'comision', 'vanguardia'], 'innovacion')}
 
 <section>
-  <div class="wrap split wide">
-    <div><span class="label rv">Comisión de Análisis PerPHect</span><h2 class="rv">El poder de una estructura colegiada.</h2></div>
-    <div class="reading rv" style="padding-top:38px"><p>La verdadera innovación de PerPHect está en no depender de la voz de un solo socio, sino en el poder de una estructura colegiada. Por ello creamos la <b>Comisión de Análisis PerPHect</b>, un mecanismo que asegura decisiones de alto impacto a través de un proceso estructurado. Cada proyecto se convierte en un <b>caso de estudio</b>.</p></div>
+  <div class="wrap">
+    <div class="reading rv" style="max-width:860px"><p>La verdadera innovación de PerPHect está en no depender de la voz de un solo socio, sino en el poder de una estructura colegiada. Por ello hemos creado la <b>Comisión de Análisis PerPHect</b>, un mecanismo que asegura decisiones de alto impacto a través de un proceso estructurado.</p></div>
   </div>
 </section>
 
 <section class="on-dark">
   <div class="wrap">
-    <span class="label rv">El caso de estudio en cuatro pasos</span>
-    <h2 class="rv">Del reto a la ejecución medida.</h2>
+    <h2 class="rv">Cada proyecto se convierte en un <em>caso de estudio</em> que se analiza siguiendo cuatro pasos:</h2>
     <div class="steps4">
       <div class="rv"><span class="n">01</span><h3>Problema</h3><p>Identificación clara del reto.</p></div>
       <div class="rv"><span class="n">02</span><h3>Oportunidad</h3><p>Reconocer áreas de crecimiento o mejora.</p></div>
@@ -283,19 +271,18 @@ page('index.html', 'PerPHect | Gobierno corporativo y empresas familiares',
 </section>
 
 <section>
-  <div class="wrap split">
-    <div class="table-diagram rv">{MESA}</div>
+  <div class="wrap split" style="align-items:center">
     <div>
-      <span class="label rv">Beneficios para el cliente</span>
-      <h2 class="rv">Un sistema de consejería que escala sin perder calidad.</h2>
+      <h2 class="rv">Beneficios para el cliente</h2>
       <ul class="benefits rv">
-        <li>Flexibilidad en los niveles de servicio.</li>
+        <li>Flexibilidad en los niveles de servicio y honorarios.</li>
         <li>Resultados consistentes, sin importar quién comunique o ejecute.</li>
         <li>Acceso a un modelo innovador que combina visión empresarial con metodología clara.</li>
       </ul>
+      <div class="box rv"><p class="quote" style="font-size:24px">En PerPHect, la asesoría no es una persona: es un <b>sistema de innovación y estrategia</b> al servicio de tu negocio.</p></div>
     </div>
+    <div class="table-diagram rv">{MESA}</div>
   </div>
-  <div class="wrap"><div class="box quote-box rv" style="margin-top:72px"><p class="quote">“En PerPHect, la asesoría no es una persona: es un sistema de innovación y estrategia al servicio de tu negocio.”</p></div></div>
 </section>
 
 {cta()}
@@ -357,7 +344,7 @@ page('gracias.html', 'Gracias | PerPHect', 'Recibimos tu solicitud.', '''
     <span class="label">Solicitud recibida</span>
     <h1>Gracias, recibimos tus datos</h1>
     <p class="lead">Un Consejero PerPHect se pondrá en contacto contigo muy pronto por correo electrónico o WhatsApp para agendar una conversación.</p>
-    <div class="ctas"><a href="/" class="btn btn-dark">Volver al inicio</a><a href="/#metodologia" class="btn btn-line">Conoce la metodología</a></div>
+    <div class="ctas"><a href="/" class="btn btn-dark">Volver al inicio</a><a href="/#consejero" class="btn btn-line">Conoce al Consejero PerPHect</a></div>
   </div>
 </section>''', noindex=True)
 
