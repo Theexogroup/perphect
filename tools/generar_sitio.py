@@ -10,7 +10,7 @@ def _v(f): return hashlib.md5(open(ROOT + f, 'rb').read()).hexdigest()[:8]
 # ---- Datos de contacto (completar) ----
 WA_NUM = '525588673288'   # solo dígitos, con lada de país
 WA_DISPLAY = '+52 55 8867 3288'
-WA_TXT = 'Hola%20PerPHect%2C%20me%20gustar%C3%ADa%20agendar%20una%20conversaci%C3%B3n.'
+WA_TXT = 'Hola%20vi%20el%20sitio%20web%20de%20PerPHect%2C%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20informaci%C3%B3n.'
 WA_LINK = f'https://wa.me/{WA_NUM}?text={WA_TXT}' if WA_NUM else ''
 WA_SVG = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.34-.5.05-.97.23-3.27-.68-2.77-1.09-4.51-3.92-4.65-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.55.79 1.9.86 2.04.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.11.07.66-.17 1.33z"/></svg>'
 
@@ -77,12 +77,12 @@ def page(fname, title, desc, body, home=False, extra_head='', noindex=False):
 <footer>
   <div class="wrap">
     <div class="fgrid">
-      <div class="fl"><img class="flogo" src="/assets/logos/perphect-blanco.svg" alt="PerPHect · Redefining Business Strategy" width="220" height="75" loading="lazy"><p>Firma de consejería empresarial. Gobierno corporativo, empresas familiares e institucionalización: empresarios consultando a empresarios.</p>{SOCIAL}</div>
+      <div class="fl"><img class="flogo" src="/assets/logos/perphect-blanco.svg" alt="PerPHect · Redefining Business Strategy" width="220" height="75" loading="lazy">{SOCIAL}</div>
       <div><h5>Sitio</h5><ul>{''.join(f'<li><a href="{h}">{t}</a></li>' for h, t in NAV[1:])}<li><a href="/#contacto">Contacto</a></li><li><a href="{WA_LINK}" target="_blank" rel="noopener">WhatsApp {WA_DISPLAY}</a></li></ul></div>
       <div><h5>Oficinas</h5><div class="addr"><div><b>CDMX</b><p>{CDMX}</p></div><div><b>Dallas</b><p>{DAL}</p></div></div></div>
     </div>
-    <div class="seal"><img src="/assets/img/sello-mx-us.png" alt="Sello binacional México y Estados Unidos" width="150" height="48" loading="lazy"><span>México · Estados Unidos</span></div>
-    <div class="fbottom"><p class="legal">La información de este sitio es de carácter general e informativo. Los alcances, entregables y honorarios de cada servicio se definen en la propuesta económica entregada a cada cliente.</p><div><p>© <span id="yr">2026</span> PerPHect®. Todos los derechos reservados.</p><div class="fbottom-links" style="margin-top:10px"><a href="aviso-privacidad.html">Aviso de privacidad</a><button type="button" data-cookie-settings>Configurar cookies</button></div></div></div>
+    <div class="seal"><img src="/assets/img/sello-mx-us.png" alt="Sello binacional México y Estados Unidos" width="150" height="48" loading="lazy"></div>
+    <div class="fbottom"><div><p>© <span id="yr">2026</span> PerPHect®. Todos los derechos reservados.</p><div class="fbottom-links" style="margin-top:10px"><a href="aviso-privacidad.html">Aviso de privacidad</a><button type="button" data-cookie-settings>Configurar cookies</button></div></div></div>
   </div>
 </footer>
 {wa}
@@ -111,8 +111,8 @@ def portadilla(title, icons, sid=''):
 </section>'''
 
 
-def cta(t='Hablemos de la siguiente etapa de tu empresa.', l='Una conversación inicial para entender tus retos, tu estructura y hacia dónde quieres llevar tu organización.'):
-    return f'''<section class="cta-gold"><div class="wrap"><div><h2 class="rv">{t}</h2><p class="rv">{l}</p></div><a href="/#contacto" class="btn btn-dark rv">Agenda una conversación</a></div></section>'''
+def cta(t='Hablemos de la siguiente etapa de tu empresa.'):
+    return f'''<section class="cta-gold"><div class="wrap"><div><h2 class="rv">{t}</h2></div><a href="/#contacto" class="btn btn-dark rv">Contacto</a></div></section>'''
 
 
 def nextp(href, label, title):
@@ -149,7 +149,7 @@ FORM = f'''<form id="leadForm" novalidate>
         <div class="field"><label for="nombre">Nombre <abbr title="Obligatorio">*</abbr></label><input id="nombre" name="nombre" type="text" autocomplete="name" maxlength="120" placeholder="Tu nombre completo" required><div class="msg">Escribe tu nombre.</div></div>
         <div class="field"><label for="email">Email <abbr title="Obligatorio">*</abbr></label><input id="email" name="email" type="email" autocomplete="email" maxlength="160" placeholder="nombre@empresa.com" required><div class="msg">Escribe un email válido.</div></div>
         <div class="field"><label for="whatsapp">WhatsApp <abbr title="Obligatorio">*</abbr></label><input id="whatsapp" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" maxlength="25" placeholder="+52 55 1234 5678" required><div class="msg">Escribe tu número con lada (10 a 15 dígitos).</div></div>
-        <div class="field"><label for="comentarios">Comentarios</label><textarea id="comentarios" name="comentarios" rows="3" maxlength="1500" placeholder="Cuéntanos sobre tu empresa y qué te gustaría resolver"></textarea></div>
+        <div class="field"><label for="comentarios">Comentarios</label><textarea id="comentarios" name="comentarios" rows="3" maxlength="1500" placeholder="Opcional"></textarea></div>
         <div class="consents"><label class="consent" for="aceptaPrivacidad"><input id="aceptaPrivacidad" type="checkbox" required><span>He leído el <a href="/aviso-privacidad" target="_blank" rel="noopener">aviso de privacidad</a> y autorizo a PerPHect a usar mis datos para contactarme y atender esta solicitud. <abbr title="Obligatorio">*</abbr></span></label>
         <label class="consent" for="aceptaMarketing"><input id="aceptaMarketing" type="checkbox"><span>Autorizo recibir publicidad, novedades e invitaciones de PerPHect por correo electrónico y WhatsApp.</span></label></div>
         <div class="ts-box" id="perphect-turnstile" aria-label="Verificación de seguridad"></div>
@@ -159,19 +159,20 @@ FORM = f'''<form id="leadForm" novalidate>
         <p class="fine"><abbr>*</abbr> Campos obligatorios. No incluyas contraseñas, datos bancarios ni documentos confidenciales. Formulario protegido con Cloudflare Turnstile.</p>
       </form>'''
 
-page('index.html', 'PerPHect | Gobierno corporativo y empresas familiares',
-     'Firma de consejería empresarial en Ciudad de México y Dallas. Gobierno corporativo, empresas familiares e institucionalización: empresarios consultando a empresarios.',
+page('index.html', 'PerPHect | Redefining Business Strategy',
+     'En PerPHect, la asesoría no es una persona: es un sistema de innovación y estrategia al servicio de tu negocio.',
      extra_head='\n<link rel="preconnect" href="https://challenges.cloudflare.com">\n<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>', home=True, body=f'''
 <section class="hero" id="inicio">
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="wrap">
-    <img class="hero-logo" src="/assets/logos/perphect-blanco.svg" alt="PerPHect · Redefining Business Strategy" width="520" height="177">
-    <p class="tag">Gobierno corporativo · Empresas familiares · Institucionalización</p>
-    <h1>Empresarios consultando a empresarios</h1>
-    <p class="intro">Acompañamos a dueños y familias empresarias en la transición de <b>Dueño-CEO a Dueño-Presidente</b>: transformamos la intención en estructura y la estructura en resultados.</p>
-    <div class="ctas"><a href="#contacto" class="btn btn-gold">Agenda una conversación</a><a href="#consejero" class="btn btn-line">Conoce al Consejero PerPHect</a></div>
+    <h1 class="hero-h1"><img class="hero-logo" src="/assets/logos/perphect-blanco.svg" alt="PerPHect · Redefining Business Strategy" width="520" height="177"></h1>
+    <img class="hero-seal" src="/assets/img/sello-mx-us.png" alt="México y Estados Unidos" width="300" height="95">
+    <nav class="cover-index" aria-label="Contenido">
+      <a href="#consejero">El Consejero <b>PerPHect</b></a>
+      <a href="#estructura">Estructura de acompañamiento</a>
+      <a href="#innovacion">Innovación <b>PerPHect</b></a>
+    </nav>
   </div>
-  <div class="cities" aria-hidden="true">Ciudad de México <i></i> Dallas</div>
 </section>
 
 {portadilla('El Consejero<br>PerPHect', ['estrategia', 'consejero'], 'consejero')}
@@ -183,12 +184,6 @@ page('index.html', 'PerPHect | Gobierno corporativo y empresas familiares',
       <p>En PerPHect entendemos que no todas las figuras de acompañamiento empresarial generan el mismo impacto. Existen <b>consultores</b> que llegan con recetas predefinidas, <b>coaches</b> que se enfocan en la persona y <b>consejeros tradicionales</b> que cumplen un rol más formal que real. Sin embargo, ninguno de ellos logra <b>resolver a fondo la compleja transición</b> de pasar de dueño a estratega y de estratega a institucionalizador.</p>
       <p>El <b>Consejero PerPHect</b> es distinto. Su valor radica en ser, ante todo, un <b>empresario consultando a empresarios</b>. La legitimidad de su acompañamiento proviene de haber enfrentado la toma de decisiones bajo presión, de haber asumido riesgos reales y de sostener el crecimiento en contextos cambiantes. Esa experiencia le permite hablar <b>desde la práctica</b> y no <b>desde la teoría</b>, aportando claridad y empatía en cada etapa del proceso.</p>
       <p>A diferencia del consultor que entrega manuales prefabricados o del coach que trabaja únicamente lo personal, el Consejero PerPHect <b>transforma la intención en estructura y la estructura en resultados.</b> Su función no es pasiva ni decorativa, sino la de un agente que asegura que cada decisión se traduzca en permanencia, institucionalización y creación de valor sostenible.</p>
-    </div>
-    <div class="compare rv">
-      <div><small>Consultor</small><h3>Recetas predefinidas</h3><p>Entrega manuales prefabricados.</p></div>
-      <div><small>Coach</small><h3>Se enfoca en la persona</h3><p>Trabaja únicamente lo personal.</p></div>
-      <div><small>Consejero tradicional</small><h3>Rol formal</h3><p>Cumple un rol más formal que real.</p></div>
-      <div><small>Consejero PerPHect</small><h3>Empresario consultando a empresarios</h3><p>Transforma la intención en estructura y la estructura en resultados.</p></div>
     </div>
   </div>
 </section>
@@ -291,9 +286,7 @@ page('index.html', 'PerPHect | Gobierno corporativo y empresas familiares',
   <div class="wrap split" style="align-items:start">
     <div>
       <span class="dots" aria-hidden="true"></span>
-      <span class="label rv">Contacto</span>
-      <h2 class="rv" style="text-transform:uppercase">Agenda una conversación</h2>
-      <p class="lead rv">Cuéntanos sobre tu empresa y el momento que vive. Un Consejero PerPHect te contactará para entender tus retos y explorar cómo podemos acompañarte.</p>
+      <h2 class="rv" style="text-transform:uppercase">Contacto</h2>
       <div class="offices rv">
         <div><span>WhatsApp</span><a href="{WA_LINK}" target="_blank" rel="noopener">{WA_DISPLAY}</a></div>
         <div><span>CDMX</span><p>{CDMX}</p></div>
@@ -314,7 +307,7 @@ page('404.html', 'Página no encontrada | PerPHect', 'La página que buscas no e
   <div class="wrap">
     <span class="label">Error 404</span>
     <h1>Esta página no existe</h1>
-    <p class="intro">La página que buscas cambió de lugar o ya no está disponible. Vuelve al inicio o agenda una conversación con nosotros.</p>
+    <p class="intro">La página que buscas cambió de lugar o ya no está disponible. Vuelve al inicio o escríbenos.</p>
     <div class="ctas"><a href="/" class="btn btn-gold">Volver al inicio</a><a href="/#contacto" class="btn btn-line">Contacto</a></div>
   </div>
 </section>''', home=True)
@@ -343,8 +336,8 @@ page('gracias.html', 'Gracias | PerPHect', 'Recibimos tu solicitud.', '''
     <span class="dots" aria-hidden="true"></span>
     <span class="label">Solicitud recibida</span>
     <h1>Gracias, recibimos tus datos</h1>
-    <p class="lead">Un Consejero PerPHect se pondrá en contacto contigo muy pronto por correo electrónico o WhatsApp para agendar una conversación.</p>
-    <div class="ctas"><a href="/" class="btn btn-dark">Volver al inicio</a><a href="/#consejero" class="btn btn-line">Conoce al Consejero PerPHect</a></div>
+    <p class="lead">Nos pondremos en contacto contigo muy pronto por correo electrónico o WhatsApp.</p>
+    <div class="ctas"><a href="/" class="btn btn-dark">Volver al inicio</a></div>
   </div>
 </section>''', noindex=True)
 
