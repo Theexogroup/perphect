@@ -431,3 +431,10 @@ body.ck-open{overflow:hidden}
 section[id]{scroll-margin-top:84px}
 @media (max-width:900px){section[id]{scroll-margin-top:72px}}
 .contact-sec{background:var(--marmol)}
+.social{display:flex;gap:12px;margin-top:22px}
+.social a{width:40px;height:40px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.8);transition:border-color .2s,color .2s}
+.social a:hover{border-color:var(--oro-claro);color:var(--oro-claro)}
+.social svg{width:18px;height:18px}
+.offices .social{margin-top:4px}
+.offices .social a{border-color:#cfccc6;color:var(--carbon)}
+.offices .social a:hover{border-color:var(--oro);color:var(--oro-profundo)}

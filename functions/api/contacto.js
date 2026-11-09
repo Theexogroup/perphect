@@ -5,7 +5,7 @@
  * se configuran en Cloudflare Pages → Settings → Variables and Secrets.
  */
 const MAIL_FROM = 'PerPHect <notificaciones@send.theexogroup.com>';
-const MAIL_TO = 'buzon1.exogroup@gmail.com';
+const MAIL_TO = 'buzon.exogroup@gmail.com';
 const SUBJECT = '[WEB PERPHECT] Nuevo contacto';
 const TURNSTILE_ACTION = 'perphect_contact';
 const JSON_HEADERS = {

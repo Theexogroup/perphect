@@ -2,8 +2,8 @@
 
 /* ===== Formulario =====
    Se procesa en Cloudflare Pages Functions (/api/contacto) con Resend y Turnstile.
-   La Site Key de Turnstile es pública: reemplazar al crear el widget PERPHECT-FORM. */
-const TURNSTILE_SITEKEY = "PENDIENTE_SITEKEY";
+   La Site Key de Turnstile (widget PERPHECT-FORM) es pública. */
+const TURNSTILE_SITEKEY = "0x4AAAAAAF6cmvWVlWuluZhG";
 const TURNSTILE_ACTION = "perphect_contact";
 
 document.addEventListener('DOMContentLoaded', () => {
