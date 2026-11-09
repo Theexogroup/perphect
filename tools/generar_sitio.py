@@ -14,14 +14,16 @@ WA_TXT = 'Hola%20PerPHect%2C%20me%20gustar%C3%ADa%20agendar%20una%20conversaci%C
 WA_LINK = f'https://wa.me/{WA_NUM}?text={WA_TXT}' if WA_NUM else ''
 WA_SVG = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.34-.5.05-.97.23-3.27-.68-2.77-1.09-4.51-3.92-4.65-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.55.79 1.9.86 2.04.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.11.07.66-.17 1.33z"/></svg>'
 
-CDMX = 'Juan de Acuña 318, Lomas - Virreyes,<br>Lomas de Chapultepec IV Secc,<br>Miguel Hidalgo, 11000, Ciudad de México'
+CDMX = 'Juan de Acuña 318, Lomas de Chapultepec,<br>Miguel Hidalgo, CDMX, 11000'
 DAL = '3441 Halifax St, Dallas,<br>Texas 75247, EE. UU.'
 
 IG = 'https://www.instagram.com/perphect.pro'
 LI = 'https://www.linkedin.com/company/perphect'
+FB = 'https://www.facebook.com/Perphect.pro'
+FB_SVG = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21h3z"/></svg>'
 IG_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>'
 LI_SVG = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.83v1.54h.05c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.13V21h-4v-4.98c0-1.19-.02-2.72-1.66-2.72-1.66 0-1.91 1.3-1.91 2.63V21h-4z"/></svg>'
-SOCIAL = f'<div class="social"><a href="{IG}" target="_blank" rel="noopener" aria-label="Instagram de PerPHect">{IG_SVG}</a><a href="{LI}" target="_blank" rel="noopener" aria-label="LinkedIn de PerPHect">{LI_SVG}</a></div>'
+SOCIAL = f'<div class="social"><a href="{IG}" target="_blank" rel="noopener" aria-label="Instagram de PerPHect">{IG_SVG}</a><a href="{LI}" target="_blank" rel="noopener" aria-label="LinkedIn de PerPHect">{LI_SVG}</a><a href="{FB}" target="_blank" rel="noopener" aria-label="Facebook de PerPHect">{FB_SVG}</a></div>'
 
 NAV = [('/#inicio', 'Inicio'), ('/#propuesta', 'Propuesta'), ('/#consejero', 'El Consejero'), ('/#metodologia', 'Metodología')]
 FONTS = '<link rel="preload" href="/assets/fonts/luiss-sans-regular.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/fonts/luiss-serif-regular.woff2" as="font" type="font/woff2" crossorigin>'
@@ -64,7 +66,7 @@ def page(fname, title, desc, body, home=False, extra_head='', noindex=False):
 <body{' class="home"' if home else ''}>
 <header>
   <div class="wrap nav">
-    <a class="brand" href="/" aria-label="PerPHect, inicio"><img class="dark" src="/assets/logos/perphect-color-sin-lema.svg" alt="PerPHect" width="170" height="47"><img class="light" src="/assets/logos/perphect-blanco-sin-lema.svg" alt="PerPHect" width="170" height="47"></a>
+    <a class="brand" href="/" aria-label="PerPHect, inicio"><img class="dark" src="/assets/logos/perphect-color.svg" alt="PerPHect · Redefining Business Strategy" width="210" height="72"><img class="light" src="/assets/logos/perphect-blanco.svg" alt="PerPHect · Redefining Business Strategy" width="210" height="72"></a>
     <button class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span></button>
     <nav class="menu" id="menu" aria-label="Principal">{links}<a href="/#contacto" class="btn btn-line{cta_active}">Contacto</a></nav>
   </div>
@@ -77,7 +79,7 @@ def page(fname, title, desc, body, home=False, extra_head='', noindex=False):
     <div class="fgrid">
       <div class="fl"><img class="flogo" src="/assets/logos/perphect-blanco.svg" alt="PerPHect · Redefining Business Strategy" width="220" height="75" loading="lazy"><p>Firma de consejería empresarial. Gobierno corporativo, empresas familiares e institucionalización: empresarios consultando a empresarios.</p>{SOCIAL}</div>
       <div><h5>Sitio</h5><ul>{''.join(f'<li><a href="{h}">{t}</a></li>' for h, t in NAV[1:])}<li><a href="/#contacto">Contacto</a></li><li><a href="{WA_LINK}" target="_blank" rel="noopener">WhatsApp {WA_DISPLAY}</a></li></ul></div>
-      <div><h5>Oficinas</h5><div class="addr"><div><b>México, CDMX</b><p>{CDMX}</p></div><div><b>Dallas, TX</b><p>{DAL}</p></div></div></div>
+      <div><h5>Oficinas</h5><div class="addr"><div><b>CDMX</b><p>{CDMX}</p></div><div><b>Dallas</b><p>{DAL}</p></div></div></div>
     </div>
     <div class="seal"><img src="/assets/img/sello-mx-us.png" alt="Sello binacional México y Estados Unidos" width="150" height="48" loading="lazy"><span>México · Estados Unidos</span></div>
     <div class="fbottom"><p class="legal">La información de este sitio es de carácter general e informativo. Los alcances, entregables y honorarios de cada servicio se definen en la propuesta económica entregada a cada cliente.</p><div><p>© <span id="yr">2026</span> PerPHect®. Todos los derechos reservados.</p><div class="fbottom-links" style="margin-top:10px"><a href="aviso-privacidad.html">Aviso de privacidad</a><button type="button" data-cookie-settings>Configurar cookies</button></div></div></div>
@@ -307,8 +309,8 @@ page('index.html', 'PerPHect | Gobierno corporativo y empresas familiares',
       <p class="lead rv">Cuéntanos sobre tu empresa y el momento que vive. Un Consejero PerPHect te contactará para entender tus retos y explorar cómo podemos acompañarte.</p>
       <div class="offices rv">
         <div><span>WhatsApp</span><a href="{WA_LINK}" target="_blank" rel="noopener">{WA_DISPLAY}</a></div>
-        <div><span>México, CDMX</span><p>{CDMX}</p></div>
-        <div><span>Dallas, TX</span><p>{DAL}</p></div>
+        <div><span>CDMX</span><p>{CDMX}</p></div>
+        <div><span>Dallas</span><p>{DAL}</p></div>
         <div><span>Redes</span>{SOCIAL}</div>
       </div>
     </div>
@@ -335,7 +337,7 @@ page('aviso-privacidad.html', 'Aviso de privacidad | PerPHect', 'Aviso de privac
      head('Legal', 'Aviso de privacidad', 'Tratamiento de datos personales y uso de cookies en perphect.com.', left=True) + '''
 <section style="padding-top:72px">
   <div class="wrap legal-doc">
-    <div class="meta"><span><b>Responsable:</b> PerPHect</span><span><b>Sitio web:</b> <a href="https://perphect.com/">https://perphect.com/</a></span><span><b>Domicilio:</b> Juan de Acuña 318, Lomas - Virreyes, Lomas de Chapultepec IV Secc, Miguel Hidalgo, 11000, Ciudad de México</span></div>
+    <div class="meta"><span><b>Responsable:</b> PerPHect</span><span><b>Sitio web:</b> <a href="https://perphect.com/">https://perphect.com/</a></span><span><b>Domicilio:</b> Juan de Acuña 318, Lomas de Chapultepec, Miguel Hidalgo, CDMX, 11000</span></div>
     <p class="notice">El aviso de privacidad integral se publicará en esta página. Mientras tanto, los datos que nos compartes a través del formulario se usan únicamente para contactarte y atender tu solicitud.</p>
     <h2 id="cookies">Cookies y tecnologías similares</h2>
     <p>Usamos tecnologías necesarias para la seguridad del sitio y del formulario. Solo con tu autorización activaremos herramientas de analítica y publicidad.</p>

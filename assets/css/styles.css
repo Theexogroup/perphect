@@ -57,9 +57,9 @@ h3{font-size:24px;line-height:1.2}
 header{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent;background:rgba(255,255,255,.97)}
 header.solid,body:not(.home) header{background:rgba(255,255,255,.97);border-color:var(--linea);backdrop-filter:saturate(1.2) blur(8px)}
 body.home header:not(.solid):not(.open){background:transparent}
-.nav{display:flex;align-items:center;justify-content:space-between;height:84px}
-.brand{display:block;width:170px;flex:none}
-.brand img{width:170px;height:auto}
+.nav{display:flex;align-items:center;justify-content:space-between;height:96px}
+.brand{display:block;width:210px;flex:none}
+.brand img{width:210px;height:auto}
 .brand .light{display:none}
 body.home header:not(.solid):not(.open) .brand .light{display:block}
 body.home header:not(.solid):not(.open) .brand .dark{display:none}
@@ -308,7 +308,7 @@ footer a:hover{color:#fff}
 .fbottom-links a:hover,.fbottom-links button:hover{color:#fff}
 
 /* WhatsApp */
-.wa{position:fixed;right:24px;bottom:24px;z-index:60;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;border-radius:40px;padding:13px 20px 13px 15px;font-weight:600;font-size:14px;box-shadow:0 10px 28px rgba(0,0,0,.18);transition:transform .2s}
+.wa{position:fixed;right:24px;bottom:24px;z-index:60;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;border-radius:40px;padding:13px 22px 13px 16px;font-weight:400;font-size:15px;letter-spacing:.06em;box-shadow:0 10px 28px rgba(0,0,0,.18);transition:transform .2s}
 .wa:hover{transform:translateY(-2px)}
 .wa svg{width:26px;height:26px;flex:none}
 
@@ -371,10 +371,10 @@ body.ck-open{overflow:hidden}
 @media (max-width:900px){
   :root{--sec:64px}
   body{font-size:17px}
-  .nav{height:72px}
-  .brand,.brand img{width:140px}
+  .nav{height:80px}
+  .brand,.brand img{width:200px}
   .burger{display:block}
-  .menu{position:fixed;top:72px;left:0;right:0;bottom:0;background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:12px 24px 40px;transform:translateX(100%);transition:transform .3s;overflow:auto}
+  .menu{position:fixed;top:80px;left:0;right:0;bottom:0;background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:12px 24px 40px;transform:translateX(100%);transition:transform .3s;overflow:auto}
   header.open .menu{transform:none}
   .menu a{padding:20px 0;border-bottom:1px solid var(--linea);font-size:14px}
   .menu a:not(.btn)::after{display:none}
@@ -428,8 +428,8 @@ body.ck-open{overflow:hidden}
 @media (max-width:900px){.split>[style*="padding-top"]{padding-top:0!important}.seal{justify-content:flex-start}}
 .page-head.plain{background:var(--marmol)}
 
-section[id]{scroll-margin-top:84px}
-@media (max-width:900px){section[id]{scroll-margin-top:72px}}
+section[id]{scroll-margin-top:96px}
+@media (max-width:900px){section[id]{scroll-margin-top:80px}}
 .contact-sec{background:var(--marmol)}
 .social{display:flex;gap:12px;margin-top:22px}
 .social a{width:40px;height:40px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.8);transition:border-color .2s,color .2s}
